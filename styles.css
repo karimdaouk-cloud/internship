@@ -35,10 +35,23 @@ header {
     padding: 1rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    margin-left: 0;
 }
 
 .logo {
     margin-right: 2rem;
+    position: relative;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    background-color: #ddd;
 }
 
 .logo a {
@@ -233,19 +246,25 @@ h2 {
     
     .header-container {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 1rem;
         padding: 1rem;
+        margin-left: 0;
     }
     
     .logo {
         margin-right: 0;
     }
     
+    .logo::after {
+        display: none;
+    }
+    
     .navigation {
         gap: 1rem;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .navigation a:not(:last-child)::after {
