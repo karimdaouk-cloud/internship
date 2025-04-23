@@ -1,2 +1,0 @@
-origin	https://github.com/karimdaouk-cloud/internship.git (fetch)
-origin	https://github.com/karimdaouk-cloud/internship.git (push)

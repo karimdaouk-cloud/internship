@@ -3,81 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael D'Angelo</title>
+    <title>Contact | Michael D'Angelo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="page">
-    <header class="header">
-        <div class="header__container">
-            <div class="header__logo">
-                <a href="index.html" class="header__logo-link">MICHAEL D'ANGELO</a>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">MICHAEL D'ANGELO</a>
             </div>
-            <nav class="header__nav">
-                <a href="about.html" class="header__nav-link">ABOUT</a>
-                <a href="resume.html" class="header__nav-link">RESUME</a>
-                <a href="projects.html" class="header__nav-link">PROJECTS</a>
-                <a href="stats.html" class="header__nav-link">STATS</a>
-                <a href="contact.html" class="header__nav-link">CONTACT</a>
+            <nav class="navigation">
+                <a href="/about">ABOUT</a>
+                <a href="/resume">RESUME</a>
+                <a href="/projects">PROJECTS</a>
+                <a href="/stats">STATS</a>
+                <a href="/contact" class="active">CONTACT</a>
             </nav>
         </div>
     </header>
 
-    <main class="main">
-        <div class="main__container">
+    <main>
+        <div class="container">
             <div class="sidebar">
-                <div class="sidebar__profile">
-                    <img src="me.jpg" alt="Michael D'Angelo" class="sidebar__profile-img">
+                <div class="profile-image">
+                    <img src="me.jpg" alt="Michael D'Angelo">
                 </div>
-                <h1 class="sidebar__name">MICHAEL D'ANGELO</h1>
-                <div class="sidebar__email">MICHAEL@MLDANGELO.COM</div>
+                <h1 class="name">MICHAEL D'ANGELO</h1>
+                <div class="email">MICHAEL@MLDANGELO.COM</div>
                 
-                <div class="sidebar__section">
-                    <h2 class="sidebar__heading">ABOUT</h2>
-                    <p class="sidebar__text">Hi, I'm Michael. I am a Stanford ICME graduate, YC alumnus, and the co-founder and CTO of Promptfoo. Previously, I was VP of Engineering at SmileID, co-founder and CTO of Arthena, and co-founded Matroid.</p>
-                    <a href="about.html" class="sidebar__learn-more">LEARN MORE</a>
+                <div class="sidebar-section">
+                    <h2>ABOUT</h2>
+                    <p>Hi, I'm Michael. I am a Stanford ICME graduate, YC alumnus, and the co-founder and CTO of Promptfoo. Previously, I was VP of Engineering at SmileID, co-founder and CTO of Arthena, and co-founded Matroid.</p>
+                    <a href="/about" class="learn-more">LEARN MORE</a>
                 </div>
             </div>
             
             <div class="content">
-                <div class="content__box">
-                    <h2 class="content__title">ABOUT THIS SITE</h2>
+                <div class="content-box">
+                    <h2 class="section-title">CONTACT</h2>
                     
-                    <div class="home">
-                        <p class="home__text">Welcome to my website. I am a software engineer, entrepreneur, and co-founder living in New York City. This site was built using modern web technologies and is an ongoing project to showcase my work and interests.</p>
+                    <div class="contact-content">
+                        <p>Feel free to get in touch. You can email me at:</p>
+                        <p class="email-line">my email is <a href="mailto:things@mldangelo.com">things@mldangelo.com</a></p>
                         
-                        <h3 class="home__subtitle">Currently</h3>
-                        <p class="home__text">I am a co-founder and CTO.</p>
-                        
-                        <h3 class="home__subtitle">Recent Projects</h3>
-                        <p class="home__text">Check out my <a href="projects.html" class="home__link">projects page</a> to see some of my recent work. I've been exploring applications of AI and building developer tools to help teams work more efficiently.</p>
-                        
-                        <div class="home__connect">
-                            <h3 class="home__subtitle">Connect</h3>
-                            <div class="home__social">
-                                <a href="https://github.com/mldangelo" target="_blank" class="home__social-link"><i class="fab fa-github"></i></a>
-                                <a href="https://linkedin.com/in/mldangelo" target="_blank" class="home__social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://twitter.com/dangelosaurus" target="_blank" class="home__social-link"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:michael@mldangelo.com" class="home__social-link"><i class="fas fa-envelope"></i></a>
-                            </div>
+                        <div class="social-links">
+                            <a href="https://github.com/mldangelo" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://facebook.com/mldangelo" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/dangelosaurus" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com/in/mldangelo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://angel.co/mldangelo" target="_blank"><i class="fab fa-angellist"></i></a>
+                            <a href="https://twitter.com/dangelosaurus" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:michael@mldangelo.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="footer__social">
-            <a href="https://github.com/mldangelo" target="_blank" class="footer__social-link"><i class="fab fa-github"></i></a>
-            <a href="https://facebook.com/mldangelo" target="_blank" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/dangelosaurus" target="_blank" class="footer__social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/mldangelo" target="_blank" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://angel.co/mldangelo" target="_blank" class="footer__social-link"><i class="fab fa-angellist"></i></a>
-            <a href="https://twitter.com/dangelosaurus" target="_blank" class="footer__social-link"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:michael@mldangelo.com" class="footer__social-link"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="footer__copyright">© MICHAEL D'ANGELO <a href="https://mldangelo.com" class="footer__link">MLDANGELO.COM</a></p>
-    </footer>
 </body>
 </html>
