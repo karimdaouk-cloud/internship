@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael D'Angelo</title>
+    <title>Brands | Michael D'Angelo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="brands.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="page">
@@ -17,8 +18,8 @@
                 <a href="about.html" class="header__nav-link">ABOUT</a>
                 <a href="resume.html" class="header__nav-link">RESUME</a>
                 <a href="projects.html" class="header__nav-link">PROJECTS</a>
-                <a href="brands.html" class="header__nav-link">BRANDS</a>
                 <a href="stats.html" class="header__nav-link">STATS</a>
+                <a href="brands.html" class="header__nav-link header__nav-link--active">BRANDS</a>
                 <a href="contact.html" class="header__nav-link">CONTACT</a>
             </nav>
         </div>
@@ -42,25 +43,34 @@
             
             <div class="content">
                 <div class="content__box">
-                    <h2 class="content__title">ABOUT THIS SITE</h2>
+                    <h2 class="content__title">BRANDS</h2>
                     
-                    <div class="home">
-                        <p class="home__text">Welcome to my website. I am a software engineer, entrepreneur, and co-founder living in New York City. This site was built using modern web technologies and is an ongoing project to showcase my work and interests.</p>
+                    <div class="brands">
+                        <p class="brands__text">
+                            Search and select three brands to see their details. This demo uses the Brandfetch API to fetch brand logos and information.
+                        </p>
                         
-                        <h3 class="home__subtitle">Currently</h3>
-                        <p class="home__text">I am a co-founder and CTO at Promptfoo, where we build tools to help users effectively develop and test large language model applications.</p>
-                        
-                        <h3 class="home__subtitle">Recent Projects</h3>
-                        <p class="home__text">Check out my <a href="projects.html" class="home__link">projects page</a> to see some of my recent work. I've been exploring applications of AI and building developer tools to help teams work more efficiently.</p>
-                        
-                        <div class="home__connect">
-                            <h3 class="home__subtitle">Connect</h3>
-                            <div class="home__social">
-                                <a href="https://github.com/mldangelo" target="_blank" class="home__social-link"><i class="fab fa-github"></i></a>
-                                <a href="https://linkedin.com/in/mldangelo" target="_blank" class="home__social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://twitter.com/dangelosaurus" target="_blank" class="home__social-link"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:michael@mldangelo.com" class="home__social-link"><i class="fas fa-envelope"></i></a>
+                        <div class="brands__search">
+                            <div class="brands__search-container">
+                                <input type="text" id="brand-search" class="brands__input" placeholder="Search for a brand...">
+                                <div id="search-results" class="brands__results"></div>
                             </div>
+                        </div>
+                        
+                        <div id="loading" class="brands__loading">
+                            <div class="brands__spinner"></div>
+                        </div>
+                        
+                        <div id="error-message" class="brands__error"></div>
+                        
+                        <div id="selected-brands" class="brands__selected">
+                            <h3 class="brands__selected-title">Selected Brands (<span id="selected-count">0</span>/3)</h3>
+                            <div id="brands-grid" class="brands__grid"></div>
+                        </div>
+                        
+                        <div id="complete-view" class="brands__complete hidden">
+                            <h3 class="brands__complete-title">All three brands selected!</h3>
+                            <p class="brands__complete-text">You've successfully completed the assignment by selecting three brands.</p>
                         </div>
                     </div>
                 </div>
@@ -80,5 +90,7 @@
         </div>
         <p class="footer__copyright">© MICHAEL D'ANGELO <a href="https://mldangelo.com" class="footer__link">MLDANGELO.COM</a></p>
     </footer>
+
+    <script src="brands.js"></script>
 </body>
 </html>
