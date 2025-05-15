@@ -20,7 +20,7 @@ class Circle {
     display() {
       noStroke();
       fill(this.color);
-      ellipse(this.x, this.y, this.size);
+      circle(this.x, this.y, this.size);
     }
   }
   
