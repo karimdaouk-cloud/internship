@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brands | Michael D'Angelo</title>
+    <title>Shapes Animation | Michael D'Angelo</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="brands.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </head>
 <body class="page">
     <header class="header">
@@ -15,14 +15,14 @@
                 <a href="index.html" class="header__logo-link">MICHAEL D'ANGELO</a>
             </div>
             <nav class="header__nav">
-                <a href="index.html" class="header__nav-link">ABOUT</a>
+                <a href="about.html" class="header__nav-link">ABOUT</a>
                 <a href="resume.html" class="header__nav-link">RESUME</a>
                 <a href="projects.html" class="header__nav-link">PROJECTS</a>
-                <a href="brands.html" class="header__nav-link header__nav-link--active">BRANDS</a>
+                <a href="brands.html" class="header__nav-link">BRANDS</a>
                 <a href="stats.html" class="header__nav-link">STATS</a>
                 <a href="contact.html" class="header__nav-link">CONTACT</a>
                 <a href="circle-animation.html" class="header__nav-link">ANIMATION</a>
-                <a href="animation2.html" class="header__nav-link">SHAPES2</a>
+                <a href="shapes-animation.html" class="header__nav-link header__nav-link--active">SHAPES</a>
             </nav>
         </div>
     </header>
@@ -45,35 +45,19 @@
             
             <div class="content">
                 <div class="content__box">
-                    <h2 class="content__title">BRANDS</h2>
+                    <h2 class="content__title">SHAPES ANIMATION</h2>
                     
-                    <div class="brands">
-                        <p class="brands__text">
-                            Search and select three brands to see their details. This demo uses the Brandfetch API to fetch brand logos and information.
+                    <div class="animation">
+                        <p class="animation__text">
+                            Easy assignment
                         </p>
+                        <ul class="animation__list">
+                            <li>Circles move only up and down</li>
+                            <li>Squares move only left and right</li>
+                            <li>Triangles move only diagonally</li>
+                        </ul>
                         
-                        <div class="brands__search">
-                            <div class="brands__search-container">
-                                <input type="text" id="brand-search" class="brands__input" placeholder="Search for a brand...">
-                                <div id="search-results" class="brands__results"></div>
-                            </div>
-                        </div>
-                        
-                        <div id="loading" class="brands__loading">
-                            <div class="brands__spinner"></div>
-                        </div>
-                        
-                        <div id="error-message" class="brands__error"></div>
-                        
-                        <div id="selected-brands" class="brands__selected">
-                            <h3 class="brands__selected-title">Selected Brands (<span id="selected-count">0</span>/3)</h3>
-                            <div id="brands-grid" class="brands__grid"></div>
-                        </div>
-                        
-                        <div id="complete-view" class="brands__complete hidden">
-                            <h3 class="brands__complete-title">All three brands selected!</h3>
-                            <p class="brands__complete-text">You've successfully completed the assignment by selecting three brands.</p>
-                        </div>
+                        <div id="shapes-canvas" style="display: flex; justify-content: center; margin: 30px 0;"></div>
                     </div>
                 </div>
             </div>
@@ -93,6 +77,6 @@
         <p class="footer__copyright">© MICHAEL D'ANGELO <a href="https://mldangelo.com" class="footer__link">MLDANGELO.COM</a></p>
     </footer>
 
-    <script src="brands.js"></script>
+    <script src="shapes.js"></script>
 </body>
 </html>
