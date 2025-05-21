@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stats | Michael D'Angelo</title>
+    <title>Circle Animation | Michael D'Angelo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="circle-animation.js"></script>
 </head>
 <body class="page">
     <header class="header">
@@ -17,9 +19,10 @@
                 <a href="about.html" class="header__nav-link">ABOUT</a>
                 <a href="resume.html" class="header__nav-link">RESUME</a>
                 <a href="projects.html" class="header__nav-link">PROJECTS</a>
-                <a href="stats.html" class="header__nav-link header__nav-link--active">STATS</a>
+                <a href="stats.html" class="header__nav-link">STATS</a>
+                <a href="brands.html" class="header__nav-link">BRANDS</a>
                 <a href="contact.html" class="header__nav-link">CONTACT</a>
-                <a href="circle-animation.html" class="header__nav-link">ANIMATION</a>
+                <a href="circle-animation.html" class="header__nav-link header__nav-link--active">ANIMATION</a>
             </nav>
         </div>
     </header>
@@ -42,54 +45,14 @@
             
             <div class="content">
                 <div class="content__box">
-                    <h2 class="content__title">STATS</h2>
+                    <h2 class="content__title">CIRCLE ANIMATION</h2>
                     
-                    <div class="stats">
-                        <h3 class="stats__section-title">SOME STATS ABOUT ME</h3>
+                    <div class="animation">
+                        <p class="animation__text">
+                            This demo shows 20 randomly moving circles created with p5.js. Each circle moves in a random direction on every frame.
+                        </p>
                         
-                        <div class="stats__table">
-                            <div class="stats__row">
-                                <div class="stats__label">Current age</div>
-                                <div class="stats__value">35.21276111629</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Countries visited</div>
-                                <div class="stats__value">53</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Current city</div>
-                                <div class="stats__value">New York, NY</div>
-                            </div>
-                        </div>
-                        
-                        <h3 class="stats__section-title">SOME STATS ABOUT THIS SITE</h3>
-                        
-                        <div class="stats__table">
-                            <div class="stats__row">
-                                <div class="stats__label">Stars this repository has on github</div>
-                                <div class="stats__value">1469</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Number of people watching this repository</div>
-                                <div class="stats__value">20</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Number of forks</div>
-                                <div class="stats__value">939</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Number of spoons</div>
-                                <div class="stats__value">0</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Number of linter warnings</div>
-                                <div class="stats__value">0</div>
-                            </div>
-                            <div class="stats__row">
-                                <div class="stats__label">Open github issues</div>
-                                <div class="stats__value">8</div>
-                            </div>
-                        </div>
+                        <div id="canvas-container" style="display: flex; justify-content: center; margin: 30px 0;"></div>
                     </div>
                 </div>
             </div>
