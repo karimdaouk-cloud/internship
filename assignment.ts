@@ -1,13 +1,13 @@
 interface Admin {
     name: string;
     email: string;
-    createUser(user: User): void;
+    createUser(user: UserRole): void;
   }
   
   interface Moderator {
     name: string;
     email: string;
-    banUser(user: User): void;
+    banUser(user: UserRole): void;
   }
   
   interface RegularUser {
@@ -16,9 +16,9 @@ interface Admin {
     viewContent(): void;
   }
   
-  type User = Admin | Moderator | RegularUser;
+  type UserRole = Admin | Moderator | RegularUser;
   
-  function performAdminTask(user: User, task: () => void): void {
+  function performAdminTask(user: UserRole, task: () => void): void {
     if (isAdmin(user)) {
       console.log('Admin is doing admin stuff...');
       task();
@@ -27,7 +27,7 @@ interface Admin {
     }
   }
   
-  const moderateContent = (user: User, contentId: string): void => {
+  const moderateContent = (user: UserRole, contentId: string): void => {
     if (isModerator(user)) {
       console.log(`moderating content ${contentId}`);
       console.log('Content banned!');
@@ -36,7 +36,7 @@ interface Admin {
     }
   }
   
-  function viewContentAsUser(user: User): void {
+  function viewContentAsUser(user: UserRole): void {
     if (isRegularUser(user)) {
       console.log('viewing content...');
       user.viewContent();
@@ -45,15 +45,15 @@ interface Admin {
     }
   }
   
-  function isAdmin(user: User): user is Admin {
+  function isAdmin(user: UserRole): user is Admin {
     return 'createUser' in user;
   }
   
-  function isModerator(user: User): user is Moderator {
+  function isModerator(user: UserRole): user is Moderator {
     return 'banUser' in user;
   }
   
-  function isRegularUser(user: User): user is RegularUser {
+  function isRegularUser(user: UserRole): user is RegularUser {
     if('viewContent' in user && !('createUser' in user) && !('banUser' in user)) {
       return true;
     }
@@ -76,7 +76,7 @@ interface Admin {
       this.email = email;
     }
     
-    createUser(user: User): void {
+    createUser(user: UserRole): void {
       console.log(`${this.name} created user ${user.name}`);
     }
   }
@@ -84,7 +84,7 @@ interface Admin {
   class ModeratorType implements Moderator {
     constructor(public name: string, public email: string) {}
     
-    banUser(user: User): void {
+    banUser(user: UserRole): void {
       console.log(this.name + " banned " + user.name);
     }
   }
@@ -100,11 +100,11 @@ interface Admin {
   class SuperUserType implements SuperUser {
     constructor(public name: string, public email: string) {}
     
-    createUser(user: User): void {
+    createUser(user: UserRole): void {
       console.log("SuperUser created: " + user.name);
     }
     
-    banUser(user: User): void {
+    banUser(user: UserRole): void {
       console.log("SuperUser banned: " + user.name);
     }
   }
